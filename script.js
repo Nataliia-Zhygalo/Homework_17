@@ -12,6 +12,7 @@ function sum (a, b) {
 либо результат функции sum.*/
 
 
+
 function main(a = 2, b = 3, c) {
 	if(typeof c === 'function')
     return c(sum(a, b));	
@@ -19,8 +20,14 @@ function main(a = 2, b = 3, c) {
     	return sum(a, b);
      }	
     }
-    function sum(a, b) {
+function sum(a, b) {
     	return a + b;
     } 
+function sum1(number){
+    return number *=  2;
+}
 
-console.log(main());
+
+console.log(main(4, 5, sum1));
+
+
